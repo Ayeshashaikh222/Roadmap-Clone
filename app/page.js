@@ -1,9 +1,9 @@
 import DividerSegment from "@/components/DividerSegment";
-import MainHeader from "@/components/MainHeader";
-import RoadMapButton from "@/components/RoadMapButton";
+import HeroSection from "@/components/HeroSection";
+import NavBar from "@/components/NavBar";
 import RoadMapElement from "@/components/RoadMapElement";
-import SubHeader from "@/components/SubHeader";
-import Image from "next/image";
+
+
 
 
 
@@ -15,8 +15,8 @@ export default function Home() {
 
   return (
     <div className="border border-yello-900">
-      <MainHeader />
-      <SubHeader />
+      <NavBar />
+      <HeroSection />
       <DividerSegment />
       <RoadMapElement role={userRole} />
 
