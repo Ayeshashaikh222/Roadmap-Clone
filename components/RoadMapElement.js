@@ -1,8 +1,10 @@
 import React from 'react'
 import RoadMapButton from './RoadMapButton';
+import CreateOwnRoadMap from './CreateOwnRoadMap';
 
 function RoadMapElement({ role }) {
-    const Dummy_Data = [
+
+    const Role_Based_Dummy_Data = [
 
         { id: 1, text: "Frontend", role: "Role based Roadmaps" },
         { id: 2, text: "Backend", role: "Role based Roadmaps" },
@@ -24,28 +26,22 @@ function RoadMapElement({ role }) {
         { id: 18, text: "Technical Write", role: "Role based Roadmaps" },
         { id: 19, text: "Data Structure & Algorithms", role: "Role based Roadmaps" },
         { id: 20, text: "MLOps", role: "Role based Roadmaps" },
-        { id: 14, text: "Computer Science", role: "Skill Based Roadmaps" },
-        { id: 15, text: "React", role: "Skill Based Roadmaps" },
-        { id: 16, text: "Angular", role: "Skill Based Roadmaps" },
-        { id: 17, text: "Software Architect", role: "Skill Based Roadmaps" },
-        { id: 18, text: "Software Architect", role: "Skill Based Roadmaps" },
-        { id: 19, text: "Software Architect", role: "Skill Based Roadmaps" },
     ];
 
     return (
-        <>
-            <div className='w-full flex flex-col md:flex-row md:items-center md:justify-center md:flex-col-3 list-none border border-yellow-500'>
-                {/* md:mx-auto grid mt-8 md:grid-cols-3 */}
 
-                {Dummy_Data.map(item => (
-                    <li key={item.id} className='w-full border border-green-500 m-1'>
+        <div className='w-full h-auto flex items-center justify-center'>
+            <div className='w-full md:w-8/12  items-center justify-center flex flex-wrap m-1'>
+
+                {Role_Based_Dummy_Data.map(item => (
+                    <div key={item.id} className='w-full md:w-1/4 m-1'>
                         <RoadMapButton text={item.text} />
-                    </li>
+                    </div>
                 ))}
+                <CreateOwnRoadMap />
             </div>
 
-
-        </>
+        </div>
     )
 }
 

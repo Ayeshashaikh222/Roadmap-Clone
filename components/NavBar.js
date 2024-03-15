@@ -4,9 +4,9 @@ import React from 'react'
 function NavBar() {
     return (
 
-        <div className="w-full flex items-center justify-center px-6 py-6 md:px-0 border border-green-600">
-            <nav className="w-1/2">
-                <div className='w-full flex items-center text-gray-500 border border-green-700'>
+        <div className="w-full flex items-center justify-center py-3 px-3 md:py-6 md:px-0">
+            <nav className="w-full md:w-1/2">
+                <div className='w-full flex items-center text-gray-500'>
                     <svg xmlns="http://www.w3.org/2000/svg"
                         width="24"
                         height="24"
@@ -22,8 +22,8 @@ function NavBar() {
                         <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
                         <line x1="12" x2="12" y1="22.08" y2="12" />
                     </svg>
-                    <div className='w-full ml-2 flex flex-row gap-16'>
-                        <div className="w-42 h-10 md:flex space-x-3 border items-center border-red-600">
+                    <div className='w-full ml-2 flex flex-row md:gap-16 justify-between'>
+                        <div className="md:w-42  h-10 md:flex md:space-x-3 md:items-center">
                             <div className='hidden md:block'>
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                     width="24"
@@ -34,7 +34,7 @@ function NavBar() {
                                     strokeWidth="2"
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
-                                    className="lucide lucide-menu text-gray-400">
+                                    className="lucide lucide-menu text-gray-400 hover:text-white">
                                     <line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="6" y2="6" />
                                     <line x1="4" x2="20" y1="18" y2="18" />
                                 </svg>
@@ -45,8 +45,8 @@ function NavBar() {
                             <div className='hidden md:block'>
                                 <Link href="/" className="text-gray-400 hover hover:text-red hover:text-white">Teams</Link>
                             </div>
-                            <div className="hidden md:block relative ml-3 border border-red-600 text-sm ">
-                                <Link href="/" className=" ml-3 md:m-3  text-blue-400 hover:text-white">We're Hiring</Link>
+                            <div className=" relative md:ml-3 md:mt-0 mt-2 md:text-sm text-md">
+                                <Link href="/" className="ml-1 md:m-3 mr-3 text-blue-400 hover:text-white">We're Hiring</Link>
                                 <div className='absolute top-[-2px] right-0'>
                                     <div className="w-2 h-2 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full"></div>
                                 </div>
@@ -68,11 +68,13 @@ function NavBar() {
                                 <span className='ml-1 text-gray-400 hover:text-white'>Search</span>
                             </button></div>
                         </div>
-                        <div className="hidden md:ml-14 md:flex md:px-4 md:items-center border border-red-600 ">
+                        <div className="hidden md:ml-13 md:flex md:px-4 md:items-center">
                             <div><Link href="/" className="text-gray-400 hover:text-white">Login</Link></div>
-                            <div><button className="bg-blue-600  ml-2 text-sm  px-6 py-1 rounded-3xl text-white bg-gradient-to-r from-blue-500  to-blue-800">Sign Up</button></div>
+                            <div>
+                                <button className="bg-blue-600 ml-3 text-sm px-6 py-1 rounded-3xl text-white bg-gradient-to-r from-blue-500  to-blue-800">Sign Up</button>
+                            </div>
                         </div>
-                        <div className='block md:hidden'>
+                        <div className='md:hidden flex items-center'>
                             <svg xmlns="http://www.w3.org/2000/svg"
                                 width="24"
                                 height="24"
@@ -82,7 +84,7 @@ function NavBar() {
                                 strokeWidth="2"
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
-                                className="lucide lucide-menu text-gray-400">
+                                className="lucide lucide-menu text-gray-400 hover:text-white">
                                 <line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="6" y2="6" />
                                 <line x1="4" x2="20" y1="18" y2="18" />
                             </svg>
